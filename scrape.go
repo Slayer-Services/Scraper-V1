@@ -25,7 +25,7 @@ func main() {
 		Shipping := listing.ChildText(".s-item__shipping")
 		Pickup := listing.ChildText(".s-item__dynamic")
 		if len(listing_title) > 1{
-			fmt.Println("Title: " + string(listing_title) + "\nPrice: " + listing_price + "\nCondition: " + condition)
+			fmt.Println("\nTitle: " + string(listing_title) + "\nPrice: " + listing_price + "\nCondition: " + condition)
 			count++
 		}
 		if len(Shipping) > 0 {
@@ -33,8 +33,6 @@ func main() {
 		} else if len(Pickup) > 0 {
 			fmt.Println(Pickup)
 		}
-
-		fmt.Println()
 	})
 
 	c.Visit("https://www.ebay.com/sch/i.html?_from=R40&_nkw=se%20bikes%20vans&_sacat=0&LH_TitleDesc=0&rt=nc&_udlo=500")
