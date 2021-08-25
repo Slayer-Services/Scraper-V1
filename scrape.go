@@ -24,10 +24,12 @@ func main() {
 		condition := listing.ChildText(".SECONDARY_INFO")
 		Shipping := listing.ChildText(".s-item__shipping")
 		Pickup := listing.ChildText(".s-item__dynamic")
+		
 		if len(listing_title) > 1{
 			fmt.Println("\nTitle: " + string(listing_title) + "\nPrice: " + listing_price + "\nCondition: " + condition)
 			count++
 		}
+		
 		if len(Shipping) > 0 {
 			fmt.Println(Shipping)
 		} else if len(Pickup) > 0 {
